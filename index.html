@@ -39,6 +39,7 @@ opacity:.035;pointer-events:none;z-index:8000}
 /* CURSOR */
 #cur{position:fixed;width:6px;height:6px;background:var(--blue);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
 #ring{position:fixed;width:28px;height:28px;border:1px solid rgba(59,91,219,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .4s,height .4s,border-color .4s}
+@media(hover:none),(pointer:coarse){#cur,#ring{display:none!important}body{cursor:auto!important}.na,.njoin,.btn-p,.btn-g,.plancta,.flink,.fsub,.fi,.fs{cursor:pointer!important}}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.6rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(237,234,228,1) 0%,rgba(237,234,228,.85) 60%,transparent 100%)}
@@ -673,11 +674,13 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
 <footer>
   <div class="flogo">Curated Temper°</div>
   <div class="flinks">
-    <a href="#" class="flink">Privacy Policy</a>
-    <a href="#" class="flink">Terms</a>
-    <a href="mailto:hello@curatedtemper.com" class="flink">hello@curatedtemper.com</a>
-    <a href="#" class="flink">Instagram</a>
-    <a href="#" class="flink">X</a>
+    <a href="privacy.html" class="flink">Privacy Policy</a>
+    <a href="terms.html" class="flink">Terms of Service</a>
+    <a href="disclaimer.html" class="flink">Disclaimer</a>
+    <a href="dmca.html" class="flink">DMCA Policy</a>
+    <a href="mailto:hello@curatedtemper.com" class="flink" target="_blank">hello@curatedtemper.com</a>
+    <a href="https://instagram.com/curatedtemper" class="flink" target="_blank">Instagram</a>
+    <a href="https://x.com/curatedtemper" class="flink" target="_blank">X</a>
   </div>
   <div class="fr">Los Angeles &nbsp;·&nbsp; Worldwide &nbsp;·&nbsp; © 2026</div>
 </footer>
