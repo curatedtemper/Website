@@ -5,7 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#EDEAE4">
 <title>Curated Temper — IP Protection for Independent Creators</title>
-<style>html,body{background:#EDEAE4 !important;color:#0d0d0d !important}</style>
+<style>html,body{background:#EDEAE4 !important;color:#0d0d0d !important}
+/* ── MANIFESTO ── */
+.manifesto-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem}
+.manifesto-body{font-family:var(--serif);font-size:1.1rem;font-weight:300;font-style:italic;line-height:1.9;color:rgba(237,234,228,.88);margin:0}
+.manifesto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-left:1px solid rgba(237,234,228,.08);border-top:1px solid rgba(237,234,228,.08)}
+.manifesto-col{padding:2rem;border-right:1px solid rgba(237,234,228,.08);border-bottom:1px solid rgba(237,234,228,.08)}
+.manifesto-col-h{font-family:var(--disp);font-weight:900;font-size:1rem;color:#5b7ff5;margin-bottom:.8rem;letter-spacing:.04em;text-transform:uppercase}
+.manifesto-col-p{font-family:var(--serif);font-size:.98rem;font-weight:300;line-height:1.9;color:rgba(237,234,228,.82);margin:0}
+@media(max-width:960px){
+  .manifesto-intro{grid-template-columns:1fr;gap:1.5rem}
+  .manifesto-grid{grid-template-columns:1fr}
+  .manifesto-col{border-right:none}
+}
+@media(max-width:600px){
+  #manifesto{padding:5rem 1.5rem}
+}
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono&display=swap" rel="stylesheet">
@@ -304,6 +320,8 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
   <div class="nlogo">Curated Temper</div>
   <div class="nright">
     <a href="#what" class="na">What we do</a>
+    <a href="#how" class="na na-hide">How it works</a>
+    <a href="#manifesto" class="na na-hide">Manifesto</a>
     <a href="#pricing" class="na">Membership</a>
     <a href="#join" class="njoin">Join waitlist</a>
   </div>
@@ -482,7 +500,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
 </div>
 
 <!-- HOW WE WORK -->
-<section class="s">
+<section class="s" id="how">
   <p class="slbl rv">How we work</p>
   <h2 class="sh rv">PRECISE.<br>DELIBERATE.<br>RELENTLESS.</h2>
   <p class="sintro rv">Three pillars. Running continuously. You do not need to do anything except create.</p>
@@ -494,13 +512,13 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
     </div>
     <div class="pillar rv d2">
       <div class="pnum">02</div><div class="ph">We Review</div>
-      <p class="pb">Every flagged match is assessed through a combination of AI-assisted monitoring and human review workflows informed by IP knowledge. Fair use considerations are reviewed as part of the assessment process. Your own platforms are excluded automatically. Only cases meeting our review criteria proceed to recommended action.</p>
-      <div class="plist"><div>Human expert review</div><div>Fair use evaluation</div><div>False positive filtering</div><div>Evidence documentation</div></div>
+      <p class="pb">Every flagged match is reviewed through a combination of automated systems and human-led IP research workflows. Potential fair use indicators are considered as part of the review workflow. Your own platforms are excluded automatically. Only cases meeting our review criteria proceed to recommended action.</p>
+      <div class="plist"><div>Human expert review</div><div>Fair use indicators considered</div><div>False positive filtering</div><div>Evidence documentation</div></div>
     </div>
     <div class="pillar rv d3">
       <div class="pnum">03</div><div class="ph">We Submit</div>
-      <p class="pb">We prepare DMCA takedown requests, cease &amp; desist letter drafts, and EU Article 17-style submissions for your review. You approve. We submit. Platforms are formally notified through structured submission processes and may respond in accordance with applicable law and platform policy.</p>
-      <div class="plist"><div>DMCA requests — priority prep</div><div>Cease &amp; desist drafts</div><div>EU Article 17 submissions</div><div>Access to independent legal professionals</div></div>
+      <p class="pb">We prepare DMCA takedown requests, enforcement correspondence drafts, and EU Article 17-style submissions for your review. You approve. We submit. Platforms are formally notified through structured submission processes and may respond in accordance with applicable law and platform policy.</p>
+      <div class="plist"><div>DMCA requests — priority prep</div><div>Cease &amp; desist drafts</div><div>EU Article 17 workflow support</div><div>Access to independent legal professionals</div></div>
     </div>
   </div>
 </section>
@@ -511,7 +529,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
   <div class="g4">
     <div class="step rv d1"><div class="stepn">Step 01</div><div class="steph">You Upload</div><p class="stepb">Submit your portfolio — images, designs, text, audio. We do not store full copies of your creative works. We may store reference fingerprints, metadata, and monitoring data for operational purposes. Your own domains and handles are whitelisted immediately.</p></div>
     <div class="step rv d2"><div class="stepn">Step 02</div><div class="steph">We Scan</div><p class="stepb">Continuous monitoring begins across the web, social platforms, AI databases, and global marketplaces — in the US, Europe, and beyond.</p></div>
-    <div class="step rv d3"><div class="stepn">Step 03</div><div class="steph">We Review</div><p class="stepb">Every match is assessed by a human with IP law expertise. Fair use evaluated. Your own platforms excluded. You review and approve before any submission is made.</p></div>
+    <div class="step rv d3"><div class="stepn">Step 03</div><div class="steph">We Review</div><p class="stepb">Every match is assessed by a human with IP law expertise. Potential fair use indicators considered. Your own platforms excluded. You review and approve before any workflow is initiated.</p></div>
     <div class="step rv d4"><div class="stepn">Step 04</div><div class="steph">You Receive</div><p class="stepb">A monthly report showing what was found, what was filed, and the current status of every case. Your work, clearly accounted for.</p></div>
   </div>
 </section>
@@ -599,6 +617,44 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
   <p class="stmtp rv">Built for creators who are <em>serious about their work</em> — and done waiting for someone who actually understands what it is worth.</p>
 </div>
 
+
+<!-- ═══ MANIFESTO ═══ -->
+<div class="blk" id="manifesto" style="border-top:1px solid var(--rule);padding:8rem 3.5rem;position:relative;z-index:1;background:var(--ink)">
+  <div style="max-width:800px;margin:0 auto">
+
+    <p style="font-family:var(--mono);font-size:.52rem;letter-spacing:.4em;text-transform:uppercase;color:#5b7ff5;margin-bottom:3rem">Why we exist</p>
+
+    <h2 style="font-family:var(--disp);font-weight:900;font-size:clamp(2.2rem,5vw,5rem);line-height:.9;letter-spacing:-.025em;color:#EDEAE4;margin-bottom:3rem">THE INTERNET<br>INDUSTRIALIZED<br>EXTRACTION.</h2>
+
+    <div class="manifesto-intro">
+      <p class="manifesto-body">Platforms were built to distribute. Then they were built to monetize. Independent creators — illustrators, photographers, designers, writers, musicians — were given reach but never given protection. Their work became infrastructure for other people's profits.</p>
+      <p class="manifesto-body">Then AI arrived and industrialized the extraction further. Billions of creative works scraped, processed, and used to train systems that now compete with the very people whose work made them possible. Without consent. Without credit. Without compensation.</p>
+    </div>
+
+    <div style="border-top:1px solid rgba(237,234,228,.08);padding-top:3rem;margin-bottom:3rem">
+      <p style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.4rem);font-weight:400;font-style:italic;line-height:1.5;color:#EDEAE4;max-width:680px">
+        "Traditional protection systems were built for institutions. Independent creators were left to navigate the same legal landscape alone, with none of the infrastructure."
+      </p>
+    </div>
+
+    <div class="manifesto-grid">
+      <div class="manifesto-col">
+        <div class="manifesto-col-h">The Problem</div>
+        <p class="manifesto-col-p">Most creators discover their work has been used without permission by accident — if at all. By then the damage is done and the evidence is gone.</p>
+      </div>
+      <div class="manifesto-col">
+        <div class="manifesto-col-h">The Shift</div>
+        <p class="manifesto-col-p">AI and platform scale changed the equation permanently. What was once a manageable problem became systematic. Visibility is now the first line of defense.</p>
+      </div>
+      <div class="manifesto-col" style="border-right:none">
+        <div class="manifesto-col-h">Our Answer</div>
+        <p class="manifesto-col-p">Curated Temper exists to give independent creators the same protection infrastructure that institutions take for granted. Precise. Intelligent. On your side.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- PRICING -->
 <section class="s" id="pricing">
   <p class="slbl rv">Membership</p>
@@ -615,7 +671,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
       <p class="planf">Evidence documentation</p>
       <p class="planf">Your platforms whitelisted</p>
       <p class="planf off">DMCA request preparation</p>
-      <p class="planf off">Cease &amp; desist letters</p>
+      <p class="planf off">Enforcement correspondence drafts</p>
       <p class="planf off">Priority dedicated review</p>
       <a href="#join" class="plancta">Get started</a>
     </div>
@@ -629,7 +685,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
       <p class="planf">Guidance on counter-notice responses</p>
       <p class="planf">Priority case review</p>
       <p class="planf">You approve before we submit</p>
-      <p class="planf off">Cease &amp; desist letters</p>
+      <p class="planf off">Enforcement correspondence drafts</p>
       <p class="planf off">Priority dedicated review</p>
       <a href="#join" class="plancta">Get started</a>
     </div>
@@ -638,7 +694,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
       <div class="planprice">$129</div><div class="planperiod">per month &nbsp;·&nbsp; or $1,290/yr</div>
       <div class="plandiv"></div>
       <p class="planf">Everything in Shield</p>
-      <p class="planf">Cease &amp; desist letter drafts</p>
+      <p class="planf">Enforcement correspondence drafts</p>
       <p class="planf">Priority response &amp; dedicated review</p>
       <p class="planf">GDPR-conscious workflow guidance</p>
       <p class="planf">Access to independent legal professionals</p>
