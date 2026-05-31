@@ -7,8 +7,8 @@
 <title>Curated Temper — IP Protection for Independent Creators</title>
 
   <!-- ═══ FAVICON — light CT with blue dot ═══ -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23EDEAE4'/%3E%3Ctext y='78' x='6' font-family='Arial Black,Arial' font-weight='900' font-size='68' fill='none' stroke='%230d0d0d' stroke-width='3.5' letter-spacing='-4'%3ECT%3C/text%3E%3Ccircle cx='83' cy='22' r='10' fill='%233B5BDB'/%3E%3C/svg%3E">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23EDEAE4'/%3E%3Ctext y='78' x='6' font-family='Arial Black,Arial' font-weight='900' font-size='68' fill='none' stroke='%230d0d0d' stroke-width='3.5' letter-spacing='-4'%3ECT%3C/text%3E%3Ccircle cx='83' cy='22' r='10' fill='%233B5BDB'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d1b3e'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='15' fill='%23EDEAE4' letter-spacing='-1'%3ECT%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%230d1b3e'/%3E%3Ctext x='90' y='125' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='85' fill='%23EDEAE4' letter-spacing='-5'%3ECT%3C/text%3E%3C/svg%3E">
 
   <!-- ═══ OPEN GRAPH ═══ -->
   <meta property="og:title" content="Curated Temper — IP Protection for Independent Creators">
@@ -48,6 +48,21 @@
 @media(max-width:600px){
   #manifesto{padding:5rem 1.5rem}
 }
+
+/* ── FIXED ROTATING BADGE ── */
+.ct-badge-fixed{
+  position:fixed;
+  bottom:2rem;
+  right:2rem;
+  z-index:200;
+  width:100px;height:100px;
+  animation:spin 20s linear infinite;
+  opacity:.7;
+  transition:opacity .3s;
+  pointer-events:none;
+}
+.ct-badge-fixed:hover{opacity:1}
+@media(max-width:960px){.ct-badge-fixed{width:70px;height:70px;bottom:1rem;right:1rem}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -344,7 +359,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
 
 <!-- NAV -->
 <nav>
-  <div class="nlogo">Curated Temper</div>
+  <a href="#" class="nlogo" style="text-decoration:none;color:inherit">Curated Temper</a>
   <div class="nright">
     <a href="#what" class="na">What we do</a>
     <a href="#how" class="na">How it works</a>
@@ -358,19 +373,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
 <section class="hero">
   <div class="hero-photo"></div>
 
-  <!-- Rotating badge -->
-  <div style="position:absolute;bottom:2.5rem;right:3.5rem;z-index:10;width:130px;height:130px;animation:spin 20s linear infinite">
-    <svg viewBox="0 0 130 130" width="130" height="130" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <path id="rp" d="M65,65 m0,-55 a55,55 0 1,1 0,110 a55,55 0 1,1 0,-110"/>
-      </defs>
-      <circle cx="65" cy="65" r="55" fill="none" stroke="rgba(237,234,228,0.15)" stroke-width="1"/>
-      <text font-size="8.5" font-family="Courier New,Courier,monospace" font-weight="bold" fill="#EDEAE4" letter-spacing="3">
-        <textPath href="#rp">CURATED TEMPER · EST. 2026 ·</textPath>
-      </text>
-      <circle cx="65" cy="65" r="3.5" fill="#3B5BDB"/>
-    </svg>
-  </div>
+  <!-- rotating badge moved to fixed position -->
 
   <div class="hero-mq">
     <div class="hrow">
@@ -817,5 +820,19 @@ document.getElementById('jf').addEventListener('submit',e=>{
   document.getElementById('sm').style.display='block';
 });
 </script>
+
+<!-- Fixed rotating badge — never overlaps anything -->
+<div class="ct-badge-fixed">
+  <svg viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <path id="rp" d="M50,50 m0,-38 a38,38 0 1,1 0,76 a38,38 0 1,1 0,-76"/>
+    </defs>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(13,13,13,0.15)" stroke-width="1"/>
+    <text font-size="8.5" font-family="Courier New,Courier,monospace" font-weight="bold" fill="#0d0d0d" letter-spacing="3">
+      <textPath href="#rp">CURATED TEMPER · EST. 2026 ·</textPath>
+    </text>
+    <circle cx="50" cy="50" r="3" fill="#3B5BDB"/>
+  </svg>
+</div>
 </body>
 </html>
