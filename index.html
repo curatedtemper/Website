@@ -7,8 +7,8 @@
 <title>Curated Temper — IP Protection for Independent Creators</title>
 
   <!-- ═══ FAVICON — light CT with blue dot ═══ -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d1b3e'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='15' fill='%23EDEAE4' letter-spacing='-1'%3ECT%3C/text%3E%3C/svg%3E">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%230d1b3e'/%3E%3Ctext x='90' y='125' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='85' fill='%23EDEAE4' letter-spacing='-5'%3ECT%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230d0d0d'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='13' fill='%23EDEAE4' letter-spacing='-0.5'%3ECT%3C/text%3E%3Ccircle cx='24' cy='9' r='3.5' fill='%233B5BDB'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ccircle cx='90' cy='90' r='90' fill='%230d0d0d'/%3E%3Ctext x='90' y='120' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='75' fill='%23EDEAE4' letter-spacing='-3'%3ECT%3C/text%3E%3Ccircle cx='140' cy='48' r='18' fill='%233B5BDB'/%3E%3C/svg%3E">
 
   <!-- ═══ OPEN GRAPH ═══ -->
   <meta property="og:title" content="Curated Temper — IP Protection for Independent Creators">
@@ -48,21 +48,6 @@
 @media(max-width:600px){
   #manifesto{padding:5rem 1.5rem}
 }
-
-/* ── FIXED ROTATING BADGE ── */
-.ct-badge-fixed{
-  position:fixed;
-  bottom:2rem;
-  right:2rem;
-  z-index:200;
-  width:100px;height:100px;
-  animation:spin 20s linear infinite;
-  opacity:.7;
-  transition:opacity .3s;
-  pointer-events:none;
-}
-.ct-badge-fixed:hover{opacity:1}
-@media(max-width:960px){.ct-badge-fixed{width:70px;height:70px;bottom:1rem;right:1rem}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,7 +112,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.6rem 2.5rem;displa
 
 /* Hero bottom */
 .hero-bottom{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;padding:2rem 3.5rem 4rem}
-.hero-kicker{font-family:var(--mono);font-size:.44rem;letter-spacing:.45em;text-transform:uppercase;color:rgba(237,234,228,.55);margin-bottom:.8rem;opacity:0;animation:up .7s ease .8s forwards}
+.hero-kicker{font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(237,234,234,.9);margin-bottom:1rem;opacity:0;animation:up .7s ease .8s forwards}
 .hero-sub{font-family:var(--serif);font-size:1.1rem;font-weight:300;font-style:italic;line-height:1.8;color:rgba(237,234,228,.75);max-width:480px;opacity:0;animation:up .7s ease 1s forwards;margin-top:.8rem}
 .hero-sub strong{font-style:normal;font-weight:400;color:#EDEAE4}
 .hero-ctas{display:flex;align-items:center;gap:2rem;justify-content:flex-end;opacity:0;animation:up .7s ease 1.1s forwards;position:relative;z-index:5}
@@ -147,13 +132,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.6rem 2.5rem;displa
 /* ═══ MARQUEE STRIP ═══ */
 .strip{overflow:hidden;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--stone2);padding:.9rem 0;position:relative;z-index:1}
 .strip-t{display:flex;animation:mq 34s linear infinite;white-space:nowrap}
-.si{font-family:var(--mono);font-size:.48rem;letter-spacing:.4em;color:var(--dim);padding:0 1.8rem;flex-shrink:0;text-transform:uppercase}
+.si{font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;color:var(--dim);padding:0 1.8rem;flex-shrink:0;text-transform:uppercase}
 .si.dot{color:var(--blue);font-size:.28rem}
 
 /* ═══ SECTIONS ═══ */
 section,div.blk{position:relative;z-index:1}
 .s{padding:8rem 3.5rem;border-top:1px solid var(--rule)}
-.slbl{font-family:var(--mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--blue);margin-bottom:3.5rem;font-weight:bold}
+.slbl{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:3.5rem;font-weight:bold}
 .sh{font-family:var(--disp);font-weight:900;font-size:clamp(2.2rem,5vw,5.5rem);line-height:.9;letter-spacing:-.025em;color:var(--ink);margin-bottom:1.5rem}
 .sintro{font-family:var(--serif);font-size:1.15rem;font-style:italic;font-weight:300;line-height:1.9;color:#4a4540;max-width:580px;margin-bottom:5rem}
 
@@ -189,8 +174,8 @@ section,div.blk{position:relative;z-index:1}
 .pq em{font-style:normal;color:var(--blue)}
 .stat{padding-bottom:2rem;border-bottom:1px solid var(--rule);margin-bottom:2rem}
 .stat:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
-.statn{font-family:var(--disp);font-weight:900;font-size:4rem;color:var(--blue);line-height:1;margin-bottom:.3rem}
-.statd{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:#4a4540;line-height:1.8;text-transform:uppercase}
+.statn{font-family:var(--disp);font-weight:900;font-size:2.8rem;color:var(--blue);line-height:1;margin-bottom:.3rem;letter-spacing:-.02em}
+.statd{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:#4a4540;line-height:1.85;text-transform:uppercase}
 
 /* PILLARS */
 .pillar{padding:3rem 2.5rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .5s;position:relative;overflow:hidden}
@@ -201,12 +186,12 @@ section,div.blk{position:relative;z-index:1}
 .pillar:hover .pnum{color:rgba(59,91,219,.1)}
 .ph{font-family:var(--disp);font-weight:700;font-size:.95rem;letter-spacing:.04em;color:var(--ink);margin-bottom:1rem}
 .pb{font-family:var(--serif);font-size:1.05rem;font-weight:300;line-height:1.95;color:#3a3530;margin-bottom:1.8rem}
-.plist div{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--ash);padding:.55rem 0;border-top:1px solid var(--rule);text-transform:uppercase}
+.plist div{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ash);padding:.6rem 0;border-top:1px solid var(--rule);text-transform:uppercase}
 .plist div::before{content:'— ';color:var(--blue)}
 
 /* STEPS */
 .step{padding:2.5rem 2rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.stepn{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--blue);margin-bottom:1.5rem}
+.stepn{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--blue);margin-bottom:1.5rem}
 .steph{font-family:var(--disp);font-weight:700;font-size:.85rem;letter-spacing:.04em;color:var(--ink);margin-bottom:.8rem}
 .stepb{font-family:var(--serif);font-size:1rem;font-weight:300;line-height:1.9;color:#3a3530}
 
@@ -221,8 +206,8 @@ section,div.blk{position:relative;z-index:1}
 .verify-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--blue)}
 .verify-icon{flex-shrink:0;color:var(--blue)}
 .verify-text{}
-.verify-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
-.verify-h{font-family:var(--disp);font-weight:700;font-size:1.1rem;color:var(--ink);margin-bottom:.6rem;letter-spacing:-.01em}
+.verify-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
+.verify-h{font-family:var(--disp);font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:.6rem;letter-spacing:-.01em}
 .verify-p{font-family:var(--serif);font-size:1.05rem;font-weight:300;font-style:italic;line-height:1.85;color:#3a3530}
 .verify-p strong{font-style:normal;font-weight:400;color:var(--ink2)}
 
@@ -247,7 +232,7 @@ section,div.blk{position:relative;z-index:1}
 .gcol:last-child{border-right:none}
 .gcolr{font-family:var(--disp);font-weight:700;font-size:.8rem;letter-spacing:.08em;color:var(--ink);margin-bottom:1rem;padding-bottom:1rem;border-bottom:2px solid var(--blue)}
 .glaws{margin-top:1.2rem;display:flex;flex-direction:column;gap:.85rem}
-.glaw strong{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.04em;color:var(--ink2);text-transform:uppercase}
+.glaw strong{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink2);text-transform:uppercase}
 .glaw span{font-family:var(--serif);font-size:1rem;font-weight:300;color:#3a3530;line-height:1.65}
 
 /* STATEMENT */
@@ -261,13 +246,13 @@ section,div.blk{position:relative;z-index:1}
 .plan:hover{background:rgba(59,91,219,.02)}
 .plan.feat{background:var(--ink);border-top:2px solid var(--blue)}
 .plan.feat::before{content:'RECOMMENDED';position:absolute;top:-1px;left:2.5rem;font-family:var(--mono);font-size:.38rem;letter-spacing:.28em;background:var(--blue);color:#fff;padding:.3rem .7rem}
-.planname{font-family:var(--disp);font-weight:700;font-size:1.1rem;letter-spacing:.1em}
+.planname{font-family:var(--disp);font-weight:700;font-size:1.3rem;letter-spacing:.08em}
 .plan:not(.feat) .planname{color:var(--ink)}
 .plan.feat .planname{color:var(--stone)}
 .plantag{font-family:var(--serif);font-style:italic;font-size:.88rem;font-weight:300;margin-bottom:1.8rem;margin-top:.2rem}
 .plan:not(.feat) .plantag{color:var(--ash)}
 .plan.feat .plantag{color:rgba(237,234,228,.45)}
-.planprice{font-family:var(--disp);font-weight:900;font-size:4rem;line-height:1}
+.planprice{font-family:var(--disp);font-weight:900;font-size:4.5rem;line-height:1}
 .plan:not(.feat) .planprice{color:var(--ink)}
 .plan.feat .planprice{color:var(--stone)}
 .planperiod{font-family:var(--mono);font-size:.41rem;letter-spacing:.18em;margin-top:.2rem;margin-bottom:2rem}
@@ -276,7 +261,7 @@ section,div.blk{position:relative;z-index:1}
 .plandiv{height:1px;margin-bottom:1.8rem}
 .plan:not(.feat) .plandiv{background:var(--rule)}
 .plan.feat .plandiv{background:rgba(237,234,228,.08)}
-.planf{font-family:var(--serif);font-size:1.02rem;font-weight:300;line-height:1.7;margin-bottom:.55rem;padding-left:1.1rem;position:relative}
+.planf{font-family:var(--serif);font-size:1.08rem;font-weight:300;line-height:1.75;margin-bottom:.55rem;padding-left:1.1rem;position:relative}
 .plan:not(.feat) .planf{color:#3a3530}
 .plan.feat .planf{color:rgba(237,234,228,.6)}
 .planf::before{content:'—';position:absolute;left:0;color:var(--blue);font-size:.6rem}
@@ -293,23 +278,23 @@ section,div.blk{position:relative;z-index:1}
 .blk.join{border-top:1px solid var(--rule);padding:8rem 3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .joinh{font-family:var(--disp);font-weight:900;font-size:clamp(2.5rem,5.5vw,6.5rem);line-height:.88;color:var(--ink);margin-bottom:2rem}
 .joinp{font-family:var(--serif);font-size:1.08rem;font-weight:300;font-style:italic;line-height:1.9;color:#3a3530;margin-bottom:1.4rem}
-.joinnote{font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:var(--ash);line-height:1.85}
+.joinnote{font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;color:var(--ash);line-height:1.9}
 .form{display:flex;flex-direction:column;border:1px solid var(--rule)}
 .frow{display:flex;border-bottom:1px solid var(--rule)}
 .frow:last-of-type{border-bottom:none}
-.fi,.fs{flex:1;background:transparent;border:none;color:var(--ink);font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;padding:1.15rem 1.4rem;outline:none;transition:background .3s;cursor:none;width:100%}
+.fi,.fs{flex:1;background:transparent;border:none;color:var(--ink);font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;padding:1.2rem 1.4rem;outline:none;transition:background .3s;width:100%}
 .fi::placeholder{color:var(--dim)}
 .fi:focus,.fs:focus{background:rgba(59,91,219,.03)}
 .fs{appearance:none;-webkit-appearance:none}
 .fs option{background:var(--stone)}
 .fi+.fi{border-left:1px solid var(--rule)}
-.fsub{width:100%;background:var(--blue);border:none;color:#fff;font-family:var(--mono);font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;padding:1.25rem;cursor:none;transition:background .3s}
+.fsub{width:100%;background:var(--blue);border:none;color:#fff;font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:1.35rem;cursor:pointer;transition:background .3s}
 .fsub:hover{background:var(--blue2)}
 .success{display:none;padding:3rem;border:1px solid var(--rule);font-family:var(--serif);font-size:1.05rem;font-style:italic;font-weight:300;line-height:1.8;color:var(--ash)}
 .success strong{display:block;font-family:var(--disp);font-weight:700;font-style:normal;font-size:1.5rem;color:var(--ink);letter-spacing:.08em;margin-top:1rem}
 
 /* FOOTER */
-footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justify-content:space-between;align-items:center;z-index:1;position:relative}
+footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify-content:space-between;align-items:center;z-index:1;position:relative;gap:1rem}
 .flogo{font-family:var(--disp);font-weight:300;font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:var(--dim)}
 .flinks{display:flex;gap:2rem}
 .flink{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);text-decoration:none;transition:color .3s;cursor:pointer}
@@ -365,7 +350,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
     <a href="#how" class="na">How it works</a>
     <a href="#manifesto" class="na">Manifesto</a>
     <a href="#pricing" class="na">Membership</a>
-    <a href="#join" class="njoin">Join waitlist</a>
+    <a href="#join" class="njoin">Get Protected</a>
   </div>
 </nav>
 
@@ -390,8 +375,8 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
 
   <div class="hero-bottom">
     <div>
-      <p class="hero-kicker">IP Monitoring &amp; Enforcement Support for Independent Creators</p>
-      <p class="hero-sub">Your work may be appearing online without your permission — on marketplaces, across social platforms, on websites you would never find alone.<br><strong>We detect. We prepare. You decide. Platforms respond.</strong></p>
+      <p class="hero-kicker">Your creative work — found, documented, protected.</p>
+      <p class="hero-sub">Marketplaces. Social platforms. AI datasets.<br><strong>We detect. We prepare. You decide.</strong></p>
     </div>
     <div class="hero-ctas">
       <a href="#pricing" class="btn-p">Protect my work</a>
@@ -439,7 +424,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
         </svg>
       </div>
       <div class="gch">What is copyright?</div>
-      <p class="gcb">Copyright is the automatic legal right you hold over anything original you create. <strong>No registration required.</strong> The moment you draw, photograph, write, or design something, you own it. Infringement means someone using your work without permission — and that use may violate your rights under applicable law.</p>
+      <p class="gcb">Copyright is the automatic legal right over anything original you create. <strong>No registration required.</strong> The moment you make something, you own it.</p>
     </div>
 
     <div class="gc nr rv d2">
@@ -451,7 +436,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
         </svg>
       </div>
       <div class="gch">What is infringement?</div>
-      <p class="gcb">It happens constantly. Designs appear on print-on-demand stores. Photos get scraped for stock sites. Illustrations end up on merchandise sold for profit. <strong>Most creators never find out.</strong> We surface it — and we prepare the formal submission requests that notify platforms of the issue.</p>
+      <p class="gcb">Designs on Redbubble. Photos on stock sites. Illustrations on merchandise sold for profit. <strong>Most creators never find out.</strong> We surface it and prepare the documentation to act.</p>
     </div>
 
     <div class="gc rv d1">
@@ -466,7 +451,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
         </svg>
       </div>
       <div class="gch">What is a DMCA notice?</div>
-      <p class="gcb">The DMCA gives rights holders — or their <strong>authorized agents</strong> — the power to submit formal takedown requests. Platforms operating under safe harbor are required to process such requests. We prepare and submit these requests on your behalf, following your review and approval. <strong>The platform decides to act. We make sure they are formally notified.</strong></p>
+      <p class="gcb">The DMCA gives rights holders — or their <strong>authorized agents</strong> — the power to submit formal takedown requests. We prepare everything. You approve. Platforms are formally notified and required to process the request.</p>
     </div>
 
     <div class="gc nr rv d2">
@@ -479,7 +464,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
         </svg>
       </div>
       <div class="gch">The AI problem</div>
-      <p class="gcb">AI companies have scraped billions of images, texts, and designs to train their models — without consent or compensation. <strong>Your work may already be inside an AI.</strong> We audit this exposure. We document it. As copyright law catches up with technology, that evidence becomes foundational.</p>
+      <p class="gcb">AI companies scraped billions of creative works to train their models — without consent or compensation. <strong>Your work may already be inside an AI.</strong> We document it. That evidence matters.</p>
     </div>
 
   </div>
@@ -502,30 +487,15 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
   </div>
 </div>
 
-<!-- WHO WE SERVE -->
-<section class="s">
-  <p class="slbl rv">Who we protect</p>
-  <h2 class="sh rv">BUILT FOR<br>CREATORS.</h2>
-  <p class="sintro rv">If you make things and put them into the world, you are vulnerable. We serve anyone whose creative work has commercial and cultural value.</p>
-  <div class="g4">
-    <div class="sv rv d1"><div class="svt">Illustrators</div><p class="svd">Your work ends up on Redbubble, Amazon, Etsy, and inside AI generators. We surface it, document it, and prepare the formal requests that notify platforms of the issue.</p></div>
-    <div class="sv rv d2"><div class="svt">Photographers</div><p class="svd">Images get scraped, reposted, and sold without credit or payment. We surface potential unauthorized uses for your review.</p></div>
-    <div class="sv rv d3"><div class="svt">Designers</div><p class="svd">Logos, patterns, typefaces — distinctive visual work attracts imitators. We monitor for potential misuse across major platforms and sources.</p></div>
-    <div class="sv rv d4"><div class="svt">Musicians</div><p class="svd">Samples, scores, and original recordings used without license. We monitor across streaming, social, and content platforms where accessible.</p></div>
-    <div class="sv rv d1"><div class="svt">Writers</div><p class="svd">Articles, essays, and books copied, republished, and monetized by others. We document and prepare recommended actions for your review.</p></div>
-    <div class="sv rv d2"><div class="svt">Fashion Designers</div><p class="svd">Prints, patterns, and textile designs copied by fast fashion at scale. We document findings and build an audit trail.</p></div>
-    <div class="sv rv d3"><div class="svt">Small Studios</div><p class="svd">Creative agencies with multiple creators to protect. Our Studio plan covers multiple works under one account.</p></div>
-    <div class="sv rv d4"><div class="svt">European Creators</div><p class="svd">EU-focused workflows and support available — including Article 17-style submissions and German-language assistance.</p></div>
-  </div>
-</section>
+<!-- who we serve removed for clarity -->
 
 <!-- PROBLEM -->
 <div class="blk problem">
   <div class="pq rv">"Most creators discover their work may have been used without permission <em>by accident</em> — if they discover it at all. "</div>
   <div>
-    <div class="stat rv d1"><div class="statn">73%</div><div class="statd">of independent creators have had their work used<br>without permission or credit</div></div>
-    <div class="stat rv d2"><div class="statn">$1.2B</div><div class="statd">estimated annual value of unauthorized<br>use of creative works online</div></div>
-    <div class="stat rv d3"><div class="statn">&lt;&nbsp;5%</div><div class="statd">of those infringements are ever<br>identified and acted upon</div></div>
+    <div class="stat rv d1"><div class="statn">Daily.</div><div class="statd">Creative work is copied, reposted and sold<br>without permission every single day</div></div>
+    <div class="stat rv d2"><div class="statn">Silently.</div><div class="statd">Most unauthorized use happens on platforms<br>creators never think to check</div></div>
+    <div class="stat rv d3"><div class="statn">Invisibly.</div><div class="statd">Without active monitoring,<br>most infringements are never discovered</div></div>
   </div>
 </div>
 
@@ -554,15 +524,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
 </section>
 
 <!-- PROCESS -->
-<section class="s">
-  <p class="slbl rv">The process</p>
-  <div class="g4">
-    <div class="step rv d1"><div class="stepn">Step 01</div><div class="steph">You Upload</div><p class="stepb">Submit your portfolio — images, designs, text, audio. We do not store full copies of your creative works. We may store reference fingerprints, metadata, and monitoring data for operational purposes. Your own domains and handles are whitelisted immediately.</p></div>
-    <div class="step rv d2"><div class="stepn">Step 02</div><div class="steph">We Scan</div><p class="stepb">Continuous monitoring begins across the web, social platforms, AI databases, and global marketplaces — in the US, Europe, and beyond.</p></div>
-    <div class="step rv d3"><div class="stepn">Step 03</div><div class="steph">We Review</div><p class="stepb">Every match is reviewed through human-led IP research workflows. Potential fair use indicators considered.  You review and approve before any workflow is initiated.</p></div>
-    <div class="step rv d4"><div class="stepn">Step 04</div><div class="steph">You Receive</div><p class="stepb">A monthly report showing what was found, what was filed, and the current status of every case. Your work, clearly accounted for.</p></div>
-  </div>
-</section>
+
 
 <!-- AI AUDIT -->
 <div class="blk audit">
@@ -603,43 +565,6 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
       <span>A documented, timestamped audit report. Evidence for today. Foundation for tomorrow.</span>
     </div>
   </div>
-</div>
-
-<!-- GLOBAL -->
-<div class="blk global">
-  <p class="slbl rv">Our legal context</p>
-  <h2 class="sh rv">GLOBAL RIGHTS.<br>LOCAL CONTEXT.<br>WORLDWIDE.</h2>
-  <p class="sintro rv">Your work does not stop at borders. Neither do we. Our workflows are designed with US and European copyright frameworks in mind. We work alongside independent legal professionals for matters requiring formal legal representation.</p>
-  <div class="gcols">
-    <div class="gcol rv d1">
-      <div class="gcolr">United States</div>
-      <div class="glaws">
-        <div class="glaw"><strong>17 U.S.C. § 106</strong><span>Exclusive rights of copyright owners</span></div>
-        <div class="glaw"><strong>DMCA § 512</strong><span>Takedown notices &amp; platform safe harbor</span></div>
-        <div class="glaw"><strong>Lanham Act</strong><span>Trademark protection &amp; enforcement</span></div>
-        <div class="glaw"><strong>CCPA</strong><span>California data protection compliance</span></div>
-      </div>
-    </div>
-    <div class="gcol rv d2">
-      <div class="gcolr">Europe</div>
-      <div class="glaws">
-        <div class="glaw"><strong>DSGVO / GDPR</strong><span>Data protection — alignment with applicable requirements</span></div>
-        <div class="glaw"><strong>EU Copyright Directive Art. 17</strong><span>Platform liability &amp; creator notices</span></div>
-        <div class="glaw"><strong>Enforcement Directive 2004/48/EC</strong><span>Civil remedies for rights holders</span></div>
-        <div class="glaw"><strong>Gewerblicher Rechtsschutz</strong><span>German trademark &amp; IP law</span></div>
-      </div>
-    </div>
-    <div class="gcol rv d3">
-      <div class="gcolr">Universal</div>
-      <div class="glaws">
-        <div class="glaw"><strong>Berne Convention</strong><span>Automatic copyright protection in 180+ countries</span></div>
-        <div class="glaw"><strong>TRIPS Agreement</strong><span>WTO intellectual property standards globally</span></div>
-        <div class="glaw"><strong>WIPO Treaties</strong><span>Digital rights and internet treaties worldwide</span></div>
-        <div class="glaw"><strong>Cross-border referrals</strong><span>Attorney network for jurisdictions requiring local counsel</span></div>
-      </div>
-    </div>
-  </div>
-  <p style="font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;color:var(--dim);margin-top:3rem;line-height:1.8;max-width:680px">Curated Temper is an IP monitoring and enforcement support service. We are not a law firm and do not provide legal advice or legal representation. All enforcement submissions are prepared for your review and require your approval before any action is taken. For matters requiring formal legal representation, independent legal professionals are available.</p>
 </div>
 
 <!-- STATEMENT -->
@@ -700,10 +625,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
       <p class="planf">US &amp; EU platform coverage</p>
       <p class="planf">Audit trail</p>
       <p class="planf">Your platforms whitelisted</p>
-      <p class="planf off">DMCA request preparation</p>
-      <p class="planf off">Enforcement correspondence drafts</p>
-      <p class="planf off">Priority dedicated review</p>
-      <a href="#join" class="plancta">Get started</a>
+                        <a href="#join" class="plancta">Get started</a>
     </div>
     <div class="plan feat rv d2">
       <div class="planname">Shield</div><div class="plantag">Monitoring and active enforcement</div>
@@ -715,9 +637,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
       <p class="planf">Counter-notice workflow information</p>
       <p class="planf">Priority case review</p>
       <p class="planf">You approve before we submit</p>
-      <p class="planf off">Enforcement correspondence drafts</p>
-      <p class="planf off">Priority dedicated review</p>
-      <a href="#join" class="plancta">Get started</a>
+                  <a href="#join" class="plancta">Get started</a>
     </div>
     <div class="plan rv d3">
       <div class="planname">Temper</div><div class="plantag">Full protection, full force</div>
@@ -738,8 +658,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
 <div class="blk join" id="join">
   <div class="rv">
     <h2 class="joinh">YOUR WORK DESERVES A GUARDIAN.</h2>
-    <p class="joinp">Curated Temper is launching soon. Join the waitlist and be among the first creators protected when we go live.</p>
-    <p class="joinp">No payment required now. We will reach out before launch with your early access details.</p>
+    <p class="joinp">Launching soon. No payment required. We will reach out before launch with your early access details.</p>
     <p class="joinnote">Your data is handled with GDPR and CCPA principles in mind. We will never share, sell, or misuse it. Protecting creative work — and the data behind it — is what we do.</p>
   </div>
   <div class="rv d2">
@@ -765,6 +684,17 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
 
 <footer>
   <div class="flogo">Curated Temper°</div>
+  <!-- Rotating badge — lives at bottom of page, never overlaps -->
+  <div style="animation:spin 20s linear infinite;width:80px;height:80px;flex-shrink:0">
+    <svg viewBox="0 0 80 80" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+      <defs><path id="fp" d="M40,40 m0,-30 a30,30 0 1,1 0,60 a30,30 0 1,1 0,-60"/></defs>
+      <circle cx="40" cy="40" r="30" fill="none" stroke="rgba(13,13,13,0.12)" stroke-width="1"/>
+      <text font-size="7" font-family="Courier New,monospace" font-weight="bold" fill="#5a5550" letter-spacing="2.5">
+        <textPath href="#fp">CURATED TEMPER · EST. 2026 ·</textPath>
+      </text>
+      <circle cx="40" cy="40" r="2.5" fill="#3B5BDB"/>
+    </svg>
+  </div>
   <div class="flinks">
     <a href="privacy.html" class="flink">Privacy Policy</a>
     <a href="terms.html" class="flink">Terms of Service</a>
@@ -774,7 +704,7 @@ footer{border-top:1px solid var(--rule);padding:2.5rem 3.5rem;display:flex;justi
     <a href="https://instagram.com/curatedtemper" class="flink" target="_blank">Instagram</a>
     <a href="https://x.com/curatedtemper" class="flink" target="_blank">X</a>
   </div>
-  <div class="fr">Los Angeles &nbsp;·&nbsp; Worldwide &nbsp;·&nbsp; © 2026</div>
+  <div class="fr">Los Angeles &nbsp;·&nbsp; Worldwide &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; Not a law firm. Not legal advice.</div>
 </footer>
 
 <script>
@@ -820,19 +750,5 @@ document.getElementById('jf').addEventListener('submit',e=>{
   document.getElementById('sm').style.display='block';
 });
 </script>
-
-<!-- Fixed rotating badge — never overlaps anything -->
-<div class="ct-badge-fixed">
-  <svg viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <path id="rp" d="M50,50 m0,-38 a38,38 0 1,1 0,76 a38,38 0 1,1 0,-76"/>
-    </defs>
-    <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(13,13,13,0.15)" stroke-width="1"/>
-    <text font-size="8.5" font-family="Courier New,Courier,monospace" font-weight="bold" fill="#0d0d0d" letter-spacing="3">
-      <textPath href="#rp">CURATED TEMPER · EST. 2026 ·</textPath>
-    </text>
-    <circle cx="50" cy="50" r="3" fill="#3B5BDB"/>
-  </svg>
-</div>
 </body>
 </html>
