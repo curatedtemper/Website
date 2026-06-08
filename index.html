@@ -35,11 +35,11 @@
 <style>html,body{background:#EDEAE4 !important;color:#0d0d0d !important}
 /* ── MANIFESTO ── */
 .manifesto-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem}
-.manifesto-body{font-family:var(--serif);font-size:1.1rem;font-weight:300;font-style:italic;line-height:1.9;color:rgba(237,234,228,.88);margin:0}
+.manifesto-body{font-family:var(--serif);font-size:1.1rem;font-weight:300;font-style:italic;line-height:1.9;color:rgba(237,234,228,.92);margin:0}
 .manifesto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-left:1px solid rgba(237,234,228,.08);border-top:1px solid rgba(237,234,228,.08)}
 .manifesto-col{padding:2rem;border-right:1px solid rgba(237,234,228,.08);border-bottom:1px solid rgba(237,234,228,.08)}
-.manifesto-col-h{font-family:var(--disp);font-weight:900;font-size:1rem;color:#5b7ff5;margin-bottom:.8rem;letter-spacing:.04em;text-transform:uppercase}
-.manifesto-col-p{font-family:var(--serif);font-size:.98rem;font-weight:300;line-height:1.9;color:rgba(237,234,228,.82);margin:0}
+.manifesto-col-h{font-family:var(--disp);font-weight:900;font-size:1rem;color:#6b8fff;margin-bottom:.8rem;letter-spacing:.04em;text-transform:uppercase}
+.manifesto-col-p{font-family:var(--serif);font-size:1rem;font-weight:300;line-height:1.9;color:rgba(237,234,228,.9);margin:0}
 @media(max-width:960px){
   .manifesto-intro{grid-template-columns:1fr;gap:1.5rem}
   .manifesto-grid{grid-template-columns:1fr}
@@ -221,8 +221,8 @@ section,div.blk{position:relative;z-index:1}
 .aitem:first-child{border-top:1px solid rgba(237,234,228,.07)}
 .aitem-h{display:flex;align-items:center;gap:.8rem;margin-bottom:.4rem}
 .aitem-icon{color:var(--blue);flex-shrink:0}
-.aitem strong{font-family:var(--disp);font-weight:400;font-size:.65rem;letter-spacing:.06em;color:rgba(237,234,228,.75)}
-.aitem span{font-family:var(--serif);font-size:1rem;font-weight:300;line-height:1.85;color:rgba(237,234,228,.7)}
+.aitem strong{font-family:var(--disp);font-weight:400;font-size:.65rem;letter-spacing:.06em;color:rgba(237,234,228,.92)}
+.aitem span{font-family:var(--serif);font-size:1rem;font-weight:300;line-height:1.85;color:rgba(237,234,228,.82)}
 
 /* GLOBAL */
 .blk.global{border-top:1px solid var(--rule);padding:7rem 3.5rem}
@@ -299,7 +299,7 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
 .flinks{display:flex;gap:2rem}
 .flink{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);text-decoration:none;transition:color .3s;cursor:pointer}
 .flink:hover{color:var(--ash)}
-.fr{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:var(--ash)}
+.fr{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:var(--ink2)}
 
 /* ANIMATIONS */
 @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
@@ -358,7 +358,7 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
 <section class="hero">
   <div class="hero-photo"></div>
 
-  <!-- rotating badge moved to fixed position -->
+  
 
   <div class="hero-mq">
     <div class="hrow">
@@ -684,17 +684,7 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
 
 <footer>
   <div class="flogo">Curated Temper°</div>
-  <!-- Rotating badge — lives at bottom of page, never overlaps -->
-  <div style="animation:spin 20s linear infinite;width:80px;height:80px;flex-shrink:0">
-    <svg viewBox="0 0 80 80" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
-      <defs><path id="fp" d="M40,40 m0,-30 a30,30 0 1,1 0,60 a30,30 0 1,1 0,-60"/></defs>
-      <circle cx="40" cy="40" r="30" fill="none" stroke="rgba(13,13,13,0.12)" stroke-width="1"/>
-      <text font-size="7" font-family="Courier New,monospace" font-weight="bold" fill="#5a5550" letter-spacing="2.5">
-        <textPath href="#fp">CURATED TEMPER · EST. 2026 ·</textPath>
-      </text>
-      <circle cx="40" cy="40" r="2.5" fill="#3B5BDB"/>
-    </svg>
-  </div>
+
   <div class="flinks">
     <a href="privacy.html" class="flink">Privacy Policy</a>
     <a href="terms.html" class="flink">Terms of Service</a>
@@ -704,7 +694,7 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
     <a href="https://instagram.com/curatedtemper" class="flink" target="_blank">Instagram</a>
     <a href="https://x.com/curatedtemper" class="flink" target="_blank">X</a>
   </div>
-  <div class="fr">Los Angeles &nbsp;·&nbsp; Worldwide &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; Not a law firm. Not legal advice.</div>
+  <div class="fr">© 2026 Curated Temper &nbsp;·&nbsp; Worldwide &nbsp;·&nbsp; <span style="color:var(--dim);font-size:.5rem">Not a law firm. Not legal advice.</span></div>
 </footer>
 
 <script>
@@ -750,5 +740,38 @@ document.getElementById('jf').addEventListener('submit',e=>{
   document.getElementById('sm').style.display='block';
 });
 </script>
+
+<!-- Fixed rotating badge — bottom right desktop only -->
+<div id="fixedbadge" style="position:fixed;bottom:2rem;right:2rem;z-index:200;width:90px;height:90px;animation:spin 20s linear infinite;opacity:.8">
+  <svg viewBox="0 0 90 90" width="90" height="90" xmlns="http://www.w3.org/2000/svg">
+    <defs><path id="fp2" d="M45,45 m0,-34 a34,34 0 1,1 0,68 a34,34 0 1,1 0,-68"/></defs>
+    <circle cx="45" cy="45" r="34" fill="none" stroke="rgba(13,13,13,0.12)" stroke-width="1"/>
+    <text font-size="7.5" font-family="Courier New,monospace" font-weight="bold" fill="#5a5550" letter-spacing="2.8">
+      <textPath href="#fp2">CURATED TEMPER · EST. 2026 ·</textPath>
+    </text>
+    <circle cx="45" cy="45" r="2.8" fill="#3B5BDB"/>
+  </svg>
+</div>
+<style>
+/* Hide fixed badge on mobile — footer version handles mobile */
+@media(max-width:960px){#fixedbadge{display:none}}
+</style>
+
+<!-- Mobile rotating badge — bottom right, visible on phones -->
+<div id="mobilebadge" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;width:80px;height:80px;animation:spin 20s linear infinite;opacity:.85">
+  <svg viewBox="0 0 80 80" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+    <defs><path id="mp" d="M40,40 m0,-30 a30,30 0 1,1 0,60 a30,30 0 1,1 0,-60"/></defs>
+    <circle cx="40" cy="40" r="30" fill="none" stroke="rgba(13,13,13,0.12)" stroke-width="1"/>
+    <text font-size="7" font-family="Courier New,monospace" font-weight="bold" fill="#5a5550" letter-spacing="2.5">
+      <textPath href="#mp">CURATED TEMPER · EST. 2026 ·</textPath>
+    </text>
+    <circle cx="40" cy="40" r="2.5" fill="#3B5BDB"/>
+  </svg>
+</div>
+<style>
+/* Show mobile badge only on mobile, hide on desktop (desktop has fixedbadge) */
+#mobilebadge{display:none}
+@media(max-width:960px){#mobilebadge{display:block}}
+</style>
 </body>
 </html>
