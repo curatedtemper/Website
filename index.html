@@ -48,6 +48,161 @@
 @media(max-width:600px){
   #manifesto{padding:5rem 1.5rem}
 }
+
+/* ── MEMBERSHIP PRICING ── */
+.mem-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border:1px solid var(--rule);
+  margin-top:4rem;
+}
+.mem-card{
+  padding:3rem 2.5rem;
+  border-right:1px solid var(--rule);
+  position:relative;
+  display:flex;flex-direction:column;gap:0;
+  transition:background .4s;
+}
+.mem-card:last-child{border-right:none}
+.mem-card:hover{background:rgba(59,91,219,.02)}
+.mem-feat{background:var(--ink);border-right:1px solid rgba(237,234,228,.08)}
+.mem-feat:hover{background:var(--ink2)}
+
+.mem-rec{
+  position:absolute;top:-1px;left:2.5rem;
+  font-family:var(--mono);font-size:.38rem;letter-spacing:.28em;
+  background:var(--blue);color:#fff;padding:.3rem .7rem;
+  text-transform:uppercase;
+}
+
+.mem-top{margin-bottom:2rem}
+.mem-name{
+  font-family:var(--disp);font-weight:700;
+  font-size:1.4rem;letter-spacing:.06em;
+  color:var(--ink);margin-bottom:.3rem;
+}
+.mem-feat .mem-name{color:var(--stone)}
+.mem-tag{
+  font-family:var(--serif);font-size:.95rem;
+  font-style:italic;font-weight:300;color:var(--ash);
+}
+.mem-feat .mem-tag{color:rgba(237,234,228,.5)}
+
+.mem-price-block{margin-bottom:1.8rem}
+.mem-price{
+  font-family:var(--disp);font-weight:900;
+  font-size:4.5rem;line-height:1;color:var(--ink);
+}
+.mem-feat .mem-price{color:var(--stone)}
+.mem-per{
+  font-family:var(--mono);font-size:.48rem;
+  letter-spacing:.15em;color:var(--dim);
+  text-transform:uppercase;margin-top:.2rem;
+}
+.mem-feat .mem-per{color:rgba(237,234,228,.3)}
+.mem-annual{
+  font-family:var(--mono);font-size:.44rem;
+  letter-spacing:.1em;color:var(--blue);
+  margin-top:.3rem;
+}
+
+.mem-rule{
+  height:1px;background:var(--rule);
+  margin-bottom:1.8rem;
+}
+.mem-feat .mem-rule{background:rgba(237,234,228,.08)}
+
+.mem-desc{
+  font-family:var(--serif);font-size:1rem;
+  font-weight:300;font-style:italic;line-height:1.85;
+  color:var(--ash);margin-bottom:1.8rem;flex:1;
+}
+.mem-feat .mem-desc{color:rgba(237,234,228,.65)}
+
+.mem-includes{
+  display:flex;flex-direction:column;
+  gap:0;margin-bottom:2rem;
+}
+.mem-item{
+  font-family:var(--mono);font-size:.52rem;
+  letter-spacing:.06em;color:var(--ash);
+  padding:.45rem 0;
+  border-top:1px solid var(--rule);
+}
+.mem-item::before{content:"— ";color:var(--blue)}
+.mem-feat .mem-item{
+  color:rgba(237,234,228,.6);
+  border-top-color:rgba(237,234,228,.08);
+}
+
+.mem-cta{
+  display:block;
+  font-family:var(--mono);font-size:.52rem;
+  letter-spacing:.18em;text-transform:uppercase;
+  text-align:center;text-decoration:none;
+  padding:1rem;
+  border:1px solid var(--dim);
+  color:var(--ink);
+  transition:all .3s;
+  margin-top:auto;
+}
+.mem-cta:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.mem-feat .mem-cta{
+  background:var(--blue);color:#fff;
+  border-color:var(--blue);
+}
+.mem-feat .mem-cta:hover{background:var(--stone);color:var(--ink)}
+
+/* Private tier */
+.mem-private{
+  border:1px solid var(--rule);
+  border-top:none;
+  display:grid;
+  grid-template-columns:1fr 1.4fr 1fr;
+  gap:0;
+}
+.mem-private-left,.mem-private-mid,.mem-private-right{
+  padding:2.5rem;
+}
+.mem-private-left{border-right:1px solid var(--rule)}
+.mem-private-mid{border-right:1px solid var(--rule)}
+
+.mem-private-label{
+  font-family:var(--mono);font-size:.48rem;
+  letter-spacing:.3em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:.8rem;
+}
+.mem-private-h{
+  font-family:var(--disp);font-weight:700;
+  font-size:1.1rem;color:var(--ink);
+  letter-spacing:-.01em;line-height:1.2;
+}
+.mem-private-desc{
+  font-family:var(--serif);font-size:1rem;
+  font-weight:300;font-style:italic;
+  line-height:1.85;color:var(--ash);
+}
+.mem-private-price{
+  font-family:var(--disp);font-weight:900;
+  font-size:1.6rem;color:var(--ink);
+  letter-spacing:-.02em;margin-bottom:1rem;
+}
+.mem-private-cta{
+  display:block;
+  font-family:var(--mono);font-size:.48rem;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--blue);text-decoration:none;
+  border-bottom:1px solid var(--blue);
+  padding-bottom:2px;
+  width:fit-content;
+}
+
+@media(max-width:960px){
+  .mem-grid{grid-template-columns:1fr}
+  .mem-card{border-right:none;border-bottom:1px solid var(--rule)}
+  .mem-private{grid-template-columns:1fr}
+  .mem-private-left,.mem-private-mid{border-right:none;border-bottom:1px solid var(--rule)}
+}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -613,45 +768,99 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
 <!-- PRICING -->
 <section class="s" id="pricing">
   <p class="slbl rv">Membership</p>
-  <h2 class="sh rv">CHOOSE YOUR<br>PROTECTION.</h2>
-  <p class="sintro rv">No contracts. Cancel anytime. Every tier includes continuous monitoring, human expert review, and a monthly report. Two months free with annual billing.</p>
-  <div class="plans">
-    <div class="plan rv d1">
-      <div class="planname">Watch</div><div class="plantag">Awareness without action</div>
-      <div class="planprice">$29</div><div class="planperiod">per month &nbsp;·&nbsp; or $290/yr</div>
-      <div class="plandiv"></div>
-      <p class="planf">Continuous web &amp; marketplace scanning</p>
-      <p class="planf">Monthly infringement report</p>
-      <p class="planf">US &amp; EU platform coverage</p>
-      <p class="planf">Audit trail</p>
-      <p class="planf">Your platforms whitelisted</p>
-                        <a href="#join" class="plancta">Get started</a>
+  <h2 class="sh rv">CHOOSE YOUR<br>LEVEL OF<br>PROTECTION.</h2>
+  <p class="sintro rv">Three membership tiers. Not software subscriptions — a working relationship built around your creative work. Annual billing available at two months free.</p>
+
+  <!-- Pricing grid — premium, no feature checkboxes -->
+  <div class="mem-grid rv">
+
+    <!-- WATCH -->
+    <div class="mem-card">
+      <div class="mem-top">
+        <div class="mem-name">Watch</div>
+        <div class="mem-tag">For creators seeking visibility</div>
+      </div>
+      <div class="mem-price-block">
+        <div class="mem-price">$79</div>
+        <div class="mem-per">per month</div>
+        <div class="mem-annual">or $790 / year — two months free</div>
+      </div>
+      <div class="mem-rule"></div>
+      <div class="mem-desc">Continuous monitoring across supported platforms and marketplaces. Monthly report delivered on the first of every month. Your work, visible to you for the first time.</div>
+      <div class="mem-includes">
+        <div class="mem-item">AI-assisted marketplace scanning</div>
+        <div class="mem-item">Monthly infringement report</div>
+        <div class="mem-item">Evidence documentation</div>
+        <div class="mem-item">Your platforms whitelisted</div>
+      </div>
+      <a href="#join" class="mem-cta">Apply for membership</a>
     </div>
-    <div class="plan feat rv d2">
-      <div class="planname">Shield</div><div class="plantag">Monitoring and active enforcement</div>
-      <div class="planprice">$69</div><div class="planperiod">per month &nbsp;·&nbsp; or $690/yr</div>
-      <div class="plandiv"></div>
-      <p class="planf">Everything in Watch</p>
-      <p class="planf">Priority DMCA request preparation</p>
-      <p class="planf">EU Article 17 notices</p>
-      <p class="planf">Counter-notice workflow information</p>
-      <p class="planf">Priority case review</p>
-      <p class="planf">You approve before we submit</p>
-                  <a href="#join" class="plancta">Get started</a>
+
+    <!-- SHIELD — featured -->
+    <div class="mem-card mem-feat">
+      <div class="mem-rec">Most chosen</div>
+      <div class="mem-top">
+        <div class="mem-name">Shield</div>
+        <div class="mem-tag">For creators seeking active protection</div>
+      </div>
+      <div class="mem-price-block">
+        <div class="mem-price">$179</div>
+        <div class="mem-per">per month</div>
+        <div class="mem-annual">or $1,790 / year — two months free</div>
+      </div>
+      <div class="mem-rule"></div>
+      <div class="mem-desc">Everything in Watch, plus human-led review of every flagged case and preparation of DMCA requests and enforcement correspondence. You approve. We submit.</div>
+      <div class="mem-includes">
+        <div class="mem-item">Everything in Watch</div>
+        <div class="mem-item">Human-led case review</div>
+        <div class="mem-item">DMCA request preparation</div>
+        <div class="mem-item">Enforcement correspondence drafts</div>
+        <div class="mem-item">EU Article 17 workflow support</div>
+        <div class="mem-item">Priority case handling</div>
+      </div>
+      <a href="#join" class="mem-cta">Apply for membership</a>
     </div>
-    <div class="plan rv d3">
-      <div class="planname">Temper</div><div class="plantag">Full protection, full force</div>
-      <div class="planprice">$129</div><div class="planperiod">per month &nbsp;·&nbsp; or $1,290/yr</div>
-      <div class="plandiv"></div>
-      <p class="planf">Everything in Shield</p>
-      <p class="planf">Enforcement correspondence drafts</p>
-      <p class="planf">Priority response &amp; dedicated review</p>
-      <p class="planf">GDPR-conscious workflow counter-notice workflow information</p>
-      <p class="planf">Access to independent legal professionals</p>
-      <p class="planf">German-language support</p>
-      <a href="#join" class="plancta">Get started</a>
+
+    <!-- TEMPER -->
+    <div class="mem-card">
+      <div class="mem-top">
+        <div class="mem-name">Temper</div>
+        <div class="mem-tag">For creators whose work is their livelihood</div>
+      </div>
+      <div class="mem-price-block">
+        <div class="mem-price">$399</div>
+        <div class="mem-per">per month</div>
+        <div class="mem-annual">or $3,990 / year — two months free</div>
+      </div>
+      <div class="mem-rule"></div>
+      <div class="mem-desc">Full protection infrastructure. Everything in Shield, plus annual AI exposure assessment, GDPR-conscious workflow guidance, and access to independent legal professionals for escalation.</div>
+      <div class="mem-includes">
+        <div class="mem-item">Everything in Shield</div>
+        <div class="mem-item">Annual AI exposure assessment</div>
+        <div class="mem-item">GDPR-conscious guidance</div>
+        <div class="mem-item">Independent legal professional access</div>
+        <div class="mem-item">German-language support</div>
+      </div>
+      <a href="#join" class="mem-cta">Apply for membership</a>
+    </div>
+
+  </div>
+
+  <!-- Private tier -->
+  <div class="mem-private rv">
+    <div class="mem-private-left">
+      <div class="mem-private-label">Temper Private</div>
+      <div class="mem-private-h">For galleries, agencies,<br>and established studios.</div>
+    </div>
+    <div class="mem-private-mid">
+      <p class="mem-private-desc">A bespoke protection arrangement for organisations with multiple creators, significant IP portfolios, or complex cross-border requirements. Scope, coverage, and terms discussed individually.</p>
+    </div>
+    <div class="mem-private-right">
+      <div class="mem-private-price">By application.</div>
+      <a href="mailto:hello@curatedtemper.com" class="mem-private-cta">hello@curatedtemper.com</a>
     </div>
   </div>
+
 </section>
 
 <!-- JOIN -->
