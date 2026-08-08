@@ -231,6 +231,10 @@ opacity:.035;pointer-events:none;z-index:8000}
 /* CT WATERMARK */
 #wm{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--disp);font-weight:900;font-size:min(62vw,62vh);color:transparent;-webkit-text-stroke:1px rgba(13,13,13,.04);pointer-events:none;z-index:0;white-space:nowrap;letter-spacing:-.06em;user-select:none;will-change:transform}
 
+#miniLogo{display:none;position:fixed;top:1rem;left:1.4rem;z-index:600;width:36px;height:36px;opacity:0;pointer-events:none;transform:translateY(-10px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+#miniLogo svg{display:block;width:100%;height:100%}
+#miniLogo.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
 /* CURSOR */
 #cur{display:none}
 #ring{display:none}
@@ -481,6 +485,14 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
   footer{flex-direction:column;gap:1.5rem;text-align:center;padding:2rem}
   .flinks{flex-wrap:wrap;justify-content:center}
 }
+@media(max-width:640px){
+  #miniLogo{display:flex}
+  nav{position:absolute;flex-direction:column;align-items:flex-start;gap:1.2rem;padding:1.4rem 1.6rem}
+  .nlogo{width:100%;padding-bottom:1.1rem;border-bottom:1px solid var(--rule)}
+  .nright{width:100%;display:grid;grid-template-columns:max-content max-content;justify-content:space-between;row-gap:.9rem;animation:none;opacity:1}
+  .na{font-size:.48rem;letter-spacing:.14em}
+  .njoin{grid-column:1/-1;width:100%;font-family:var(--serif);font-style:italic;font-weight:400;font-size:.95rem;letter-spacing:.01em;text-transform:none;border-bottom:none;padding:.9rem 0 0;margin-top:.2rem;border-top:1px solid var(--rule);text-align:right}
+}
 @media(max-width:600px){
   .hi{font-size:clamp(3.5rem,18vw,7rem)}
   .frow{flex-direction:column}
@@ -493,6 +505,14 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
 <div id="wm">CT</div>
 <div id="cur"></div>
 <div id="ring"></div>
+
+<a href="#" id="miniLogo" aria-label="Back to top">
+  <svg viewBox="0 0 220 220" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="110" cy="110" r="110" fill="#0d0d0d"/>
+    <text x="4" y="175" font-family="Unbounded,sans-serif" font-weight="900" font-size="155" fill="#EDEAE4" letter-spacing="-5">C</text>
+    <text x="94" y="175" font-family="Unbounded,sans-serif" font-weight="900" font-size="155" fill="none" stroke="#EDEAE4" stroke-width="7" letter-spacing="-5">T</text>
+  </svg>
+</a>
 
 <!-- NAV -->
 <nav>
@@ -869,12 +889,12 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
   <div class="rv d2">
     <form class="form" id="jf">
       <div class="frow">
-        <input type="text" class="fi" placeholder="Your name" required>
-        <input type="email" class="fi" placeholder="hello@youremail.com" required>
+        <input type="text" class="fi" name="name" placeholder="Your name" required>
+        <input type="email" class="fi" name="email" placeholder="hello@youremail.com" required>
       </div>
-      <div class="frow"><select class="fs"><option value="" disabled selected>What do you create?</option><option>Visual art / Illustration</option><option>Photography</option><option>Graphic design</option><option>Music / Audio</option><option>Writing / Content</option><option>Fashion / Textile design</option><option>Film / Video</option><option>Other creative work</option></select></div>
-      <div class="frow"><select class="fs"><option value="" disabled selected>Preferred plan</option><option>Watch — $79/mo</option><option>Shield — $179/mo</option><option>Temper — $399/mo</option><option>Temper Private — By application</option></select></div>
-      <div class="frow"><select class="fs"><option value="" disabled selected>Your region</option><option>United States</option><option>European Union</option><option>United Kingdom</option><option>Other</option></select></div>
+      <div class="frow"><select class="fs" name="creative_type"><option value="" disabled selected>What do you create?</option><option>Visual art / Illustration</option><option>Photography</option><option>Graphic design</option><option>Music / Audio</option><option>Writing / Content</option><option>Fashion / Textile design</option><option>Film / Video</option><option>Other creative work</option></select></div>
+      <div class="frow"><select class="fs" name="plan"><option value="" disabled selected>Preferred plan</option><option>Watch — $79/mo</option><option>Shield — $179/mo</option><option>Temper — $399/mo</option><option>Temper Private — By application</option></select></div>
+      <div class="frow"><select class="fs" name="region"><option value="" disabled selected>Your region</option><option>United States</option><option>European Union</option><option>United Kingdom</option><option>Other</option></select></div>
       <div class="frow" style="padding:1.2rem 1.4rem;gap:.8rem;align-items:flex-start;border-bottom:1px solid var(--rule)">
         <input type="checkbox" id="agree" required style="margin-top:.3rem;flex-shrink:0;accent-color:var(--blue);width:14px;height:14px;cursor:pointer">
         <label for="agree" style="font-family:var(--mono);font-size:.52rem;letter-spacing:.06em;color:var(--ash);line-height:1.7;cursor:pointer">
@@ -928,8 +948,40 @@ window.addEventListener('scroll',()=>{
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})},{threshold:.08});
 document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 
+// MINI LOGO (mobile scroll-up return-to-top)
+(function(){
+  const mini = document.getElementById('miniLogo');
+  const navEl = document.querySelector('nav');
+  let lastY = window.scrollY;
+  let showTimer = null;
+  window.addEventListener('scroll', ()=>{
+    if(window.innerWidth > 640) return;
+    const y = window.scrollY;
+    const navHeight = navEl.offsetHeight;
+    const scrollingUp = y < lastY;
+    const shouldShow = y > navHeight + 40 && scrollingUp;
+    if(shouldShow){
+      if(!showTimer && !mini.classList.contains('show')){
+        showTimer = setTimeout(()=>{
+          mini.classList.add('show');
+          showTimer = null;
+        },260);
+      }
+    } else {
+      if(showTimer){ clearTimeout(showTimer); showTimer = null; }
+      mini.classList.remove('show');
+    }
+    lastY = y;
+  },{passive:true});
+  mini.addEventListener('click', e=>{
+    e.preventDefault();
+    window.scrollTo({top:0,behavior:'smooth'});
+    mini.classList.remove('show');
+  });
+})();
+
 // FORM
-document.getElementById('jf').addEventListener('submit',e=>{
+document.getElementById('jf').addEventListener('submit',async e=>{
   e.preventDefault();
   const agree = document.getElementById('agree');
   if(!agree.checked){
@@ -941,7 +993,17 @@ document.getElementById('jf').addEventListener('submit',e=>{
     },2000);
     return;
   }
-  e.target.style.display='none';
+  const form = e.target;
+  try{
+    await fetch('https://formspree.io/f/mljrgbqo',{
+      method:'POST',
+      body:new FormData(form),
+      headers:{'Accept':'application/json'}
+    });
+  }catch(err){
+    console.error('Form submission failed:',err);
+  }
+  form.style.display='none';
   document.getElementById('sm').style.display='block';
 });
 </script>
