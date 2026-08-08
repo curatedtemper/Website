@@ -468,6 +468,17 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
 .rv.in{opacity:1;transform:translateY(0)}
 .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
 
+/* DESKTOP READABILITY — small microcopy was fine on mobile (closer viewing distance) but too small on larger screens */
+@media(min-width:641px){
+  .gcb{font-size:1.15rem;line-height:1.85}
+  .gch{font-size:.88rem}
+  .mem-desc{font-size:1.08rem;line-height:1.8}
+  .mem-item{font-size:.68rem;padding:.55rem 0}
+  .mem-per{font-size:.62rem}
+  .mem-annual{font-size:.58rem}
+  .statd{font-size:.78rem;line-height:1.8}
+}
+
 /* RESPONSIVE */
 @media(max-width:960px){
   nav{padding:1.5rem 2rem}
