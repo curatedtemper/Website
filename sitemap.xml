@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://curatedtemper.com/</loc>
+    <loc>https://www.curatedtemper.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://curatedtemper.com/privacy.html</loc>
+    <loc>https://www.curatedtemper.com/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://curatedtemper.com/terms.html</loc>
+    <loc>https://www.curatedtemper.com/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://curatedtemper.com/dmca.html</loc>
+    <loc>https://www.curatedtemper.com/dmca.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://curatedtemper.com/disclaimer.html</loc>
+    <loc>https://www.curatedtemper.com/disclaimer.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

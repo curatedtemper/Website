@@ -68,4 +68,4 @@ User-agent: YouBot
 Disallow: /
 
 # Sitemap
-Sitemap: https://curatedtemper.com/sitemap.xml
+Sitemap: https://www.curatedtemper.com/sitemap.xml
