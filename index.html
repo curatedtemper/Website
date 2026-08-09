@@ -263,9 +263,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.6rem 2.5rem;displa
 
 /* Two-row hero marquee */
 .hero-mq{position:relative;z-index:2;overflow:hidden;line-height:.88;margin-top:auto}
-.hrow{display:flex;white-space:nowrap;overflow:hidden}
-.hrow:nth-child(1) .hi{color:#EDEAE4;animation:hq1 22s linear infinite}
-.hrow:nth-child(2) .hi{color:transparent;-webkit-text-stroke:1px rgba(237,234,228,.35);animation:hq2 22s linear infinite}
+.hrow{display:flex;white-space:nowrap;overflow:hidden;width:max-content}
+.hrow:nth-child(1){animation:hq1 120s linear infinite}
+.hrow:nth-child(1) .hi{color:#EDEAE4}
+.hrow:nth-child(2){animation:hq2 120s linear infinite}
+.hrow:nth-child(2) .hi{color:transparent;-webkit-text-stroke:1px rgba(237,234,228,.35)}
 .hi{font-family:var(--disp);font-weight:900;font-size:clamp(5rem,15vw,17rem);letter-spacing:-.03em;line-height:.88;flex-shrink:0;padding-right:1rem;display:block}
 
 /* Hero bottom */
@@ -464,7 +466,7 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes hq1{from{transform:translateX(0)}to{transform:translateX(-33.333%)}}
-@keyframes hq2{from{transform:translateX(-33.333%)}to{transform:translateX(0)}}
+@keyframes hq2{from{transform:translateX(-51.177%)}to{transform:translateX(-17.8436%)}}
 
 .rv{opacity:0;transform:translateY(14px);transition:opacity .9s ease,transform .9s ease}
 .rv.in{opacity:1;transform:translateY(0)}
@@ -515,9 +517,9 @@ footer{border-top:1px solid var(--rule);padding:2rem 3.5rem;display:flex;justify
   #miniLogo{display:flex}
   nav{position:absolute;flex-direction:column;align-items:flex-start;gap:1.2rem;padding:1.4rem 1.6rem}
   .nlogo{width:100%;padding-bottom:1.1rem;border-bottom:1px solid var(--rule)}
-  .nright{width:100%;display:grid;grid-template-columns:max-content max-content;justify-content:space-between;row-gap:.9rem;animation:none;opacity:1}
+  .nright{width:100%;display:grid;grid-template-columns:max-content max-content;grid-template-rows:auto auto;grid-auto-flow:column;justify-content:space-between;row-gap:.9rem;animation:none;opacity:1}
   .na{font-size:.48rem;letter-spacing:.14em}
-  .njoin{grid-column:1/-1;width:100%;font-family:var(--serif);font-style:italic;font-weight:400;font-size:.95rem;letter-spacing:.01em;text-transform:none;border-bottom:none;padding:.9rem 0 0;margin-top:.2rem;border-top:1px solid var(--rule);text-align:right}
+  .njoin{display:none}
 }
 @media(max-width:600px){
   .hi{font-size:clamp(3.5rem,18vw,7rem)}
