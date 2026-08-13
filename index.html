@@ -14,13 +14,14 @@
   <meta property="og:url" content="https://www.curatedtemper.com">
   <meta property="og:site_name" content="Curated Temper">
   <meta property="og:image" content="https://www.curatedtemper.com/og-image.png">
+  <meta property="og:image:type" content="image/png">
 
   <!-- ═══ X / TWITTER CARD ═══ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@curatedtemper">
   <meta name="twitter:title" content="Curated Temper — IP Protection for Independent Creators">
   <meta name="twitter:description" content="We monitor. We prepare. You decide. Platforms respond.">
-  <meta name="twitter:image" content="https://curatedtemper.com/og-image.png">
+  <meta name="twitter:image" content="https://www.curatedtemper.com/og-image.png">
 
   <!-- ═══ SEO ═══ -->
   <meta name="description" content="Curated Temper is an IP monitoring and enforcement support service for independent creators. We surface unauthorized uses of your work and prepare the documentation to act.">
@@ -32,7 +33,9 @@
 
 
   <!-- ONE FAVICON — permanent, never changes -->
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
 
@@ -272,7 +275,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.6rem 2.5rem;displa
 .hrow:nth-child(2){animation:hq2 120s linear infinite;animation-play-state:paused}
 .fonts-ready .hrow:nth-child(2){animation-play-state:running}
 .hrow:nth-child(2) .hi{color:transparent;-webkit-text-stroke:1px rgba(237,234,228,.35)}
-.hi{font-family:var(--disp);font-weight:900;font-size:clamp(5rem,15vw,17rem);letter-spacing:-.03em;line-height:.88;flex-shrink:0;padding-right:1rem;display:block}
+.hi{font-family:var(--disp);font-weight:900;font-size:clamp(5rem,15vw,17rem);letter-spacing:-.03em;line-height:.88;flex-shrink:0;padding-right:1rem;display:block;opacity:0;transition:opacity .25s ease}
+.fonts-ready .hi{opacity:1}
 
 /* Hero bottom */
 .hero-bottom{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;padding:2rem 3.5rem 4rem}
