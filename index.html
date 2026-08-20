@@ -207,10 +207,22 @@
   .mem-private-left,.mem-private-mid{border-right:none;border-bottom:1px solid var(--rule)}
 }
 </style>
+<!-- Unbounded is self-hosted (see /fonts/Unbounded-Variable.woff2) and preloaded below so the
+     hero marquee never paints in a fallback typeface. Only Cormorant Garamond / Space Mono still
+     come from Google Fonts. -->
+<link rel="preload" href="/fonts/Unbounded-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
+@font-face{
+  font-family:'Unbounded';
+  src:url('/fonts/Unbounded-Variable.woff2') format('woff2');
+  font-weight:200 900;
+  font-stretch:75% 125%;
+  font-style:normal;
+  font-display:block;
+}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --stone:#EDEAE4;
@@ -266,7 +278,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.6rem 2.5rem;displa
 .hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(237,234,228,.2) 85%,var(--stone) 100%)}
 
 /* Two-row hero marquee */
-.hero-mq{position:relative;z-index:2;overflow:hidden;line-height:.88;margin-top:auto}
+/* Hidden until Unbounded has actually loaded (belt-and-suspenders on top of font-display:block +
+   preload) so the giant headline can never paint in a fallback typeface, even for a frame. */
+.hero-mq{position:relative;z-index:2;overflow:hidden;line-height:.88;margin-top:auto;opacity:0}
+.fonts-ready .hero-mq{opacity:1;transition:opacity .15s ease}
 .hrow{display:flex;white-space:nowrap;overflow:hidden;width:max-content}
 .hrow:nth-child(1){animation:hq1 120s linear infinite;animation-play-state:paused}
 .fonts-ready .hrow:nth-child(1){animation-play-state:running}
